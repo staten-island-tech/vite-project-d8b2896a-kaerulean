@@ -6,6 +6,8 @@ const menuItems = [
         type: "appetizer",
         origin: "europe",
         vegan: true,
+        price: "$2.00",
+        picture: "./images/frenchFries.jpg"
     },
 
     {
@@ -13,6 +15,8 @@ const menuItems = [
         type: "appetizer",
         origin: "asia",
         vegan: false,
+        price: "$3.50",
+        picture: "./images/dumplings.png",
     },
 
     {
@@ -20,6 +24,8 @@ const menuItems = [
         type: "appetizer",
         origin: "americas",
         vegan: false,
+        price: "$8.50",
+        picture: "./images/chickenWings.jpg",
     },
 
     {
@@ -27,6 +33,8 @@ const menuItems = [
         type: "side",
         origin: "europe",
         vegan: false,
+        price: "$5.00",
+        picture: "./images/macAndCheese.png",
     },
 
     {
@@ -34,6 +42,8 @@ const menuItems = [
         type: "side",
         origin: "asia",
         vegan: false,
+        price: "$5.00",
+        picture: "./images/steamedEggPudding.png",
     },
 
     {
@@ -41,6 +51,8 @@ const menuItems = [
         type: "main",
         origin: "europe", 
         vegan: false,
+        price: "$18.00",
+        picture: "./images/pizza.png",
     },
 
     {
@@ -48,6 +60,8 @@ const menuItems = [
         type: "main",
         origin: "americas", 
         vegan: false,
+        price: "$20.00",
+        picture: "./images/roastTurkey.jpg",
     },
 
     {
@@ -55,6 +69,8 @@ const menuItems = [
         type: "main",
         origin: "asia", 
         vegan: false,
+        price: "$35.00",
+        picture: "./images/kbbq.jpg",
     },
 
     {
@@ -62,13 +78,17 @@ const menuItems = [
         type: "main",
         origin: "americas", 
         vegan: true,
+        price: "$16.00",
+        picture: "./images/enchiladas.jpg",
     },
 
     {
         name: "fruit",
         type: "dessert",
-        origin: "asia", 
+        origin: "americas",
         vegan: true,
+        price: "$15.00",
+        picture: "./images/fruit.jpg",
     },
 
     {
@@ -76,6 +96,8 @@ const menuItems = [
         type: "dessert",
         origin: "europe", 
         vegan: false,
+        price: "$8.00",
+        picture: "./images/gelato.jpg",
     },
 
     {
@@ -83,6 +105,8 @@ const menuItems = [
         type: "dessert",
         origin: "asia", 
         vegan: true,
+        price: "$10.00",
+        picture: "./images/mangoStickyRice.jpg",
     },
 
 ]
