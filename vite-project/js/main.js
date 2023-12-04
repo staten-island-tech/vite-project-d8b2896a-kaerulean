@@ -40,8 +40,8 @@ function filters(){
         hi(type) 
         hi(origin)
         if (category === "vegan"){
-            const f = menuItems.filter((el)=>el.vegan === true)
-            hi(f)
+            const veganfilter = menuItems.filter((el)=>el.vegan === true)
+            hi(veganfilter)
         } else if (category === "non-vegan") {
             const a = menuItems.filter((el)=>el.vegan === false)
             hi(a)
