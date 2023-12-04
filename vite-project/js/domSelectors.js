@@ -19,6 +19,7 @@ export const DOMSelectors = {
 
     container: document.querySelector(".container"),
     buttons: document.querySelector(".buttons"),
+    clicky: document.querySelectorAll(".clicky"),
     theme: document.querySelector("#theme")
 }
 

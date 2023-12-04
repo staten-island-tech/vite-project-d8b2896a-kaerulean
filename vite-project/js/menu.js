@@ -7,7 +7,7 @@ const menuItems = [
         origin: "europe",
         vegan: true,
         price: "$2.00",
-        picture: "./images/frenchFries.jpg"
+        picture: "/./images/frenchFries.jpg"
     },
 
     {
@@ -16,7 +16,7 @@ const menuItems = [
         origin: "asia",
         vegan: false,
         price: "$3.50",
-        picture: "./images/dumplings.png",
+        picture: "/./images/dumplings.png",
     },
 
     {
@@ -43,7 +43,7 @@ const menuItems = [
         origin: "asia",
         vegan: false,
         price: "$5.00",
-        picture: "./images/steamedEggPudding.png",
+        picture: "/./images/steamedEggPudding.png",
     },
 
     {

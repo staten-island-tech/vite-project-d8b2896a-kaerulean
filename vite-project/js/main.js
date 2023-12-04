@@ -2,8 +2,62 @@ import '../styles/style.css' //search how to import css to js
 import {menuItems} from './menu.js';
 import { DOMSelectors } from './domSelectors.js';
 
+function theme1(){
+    DOMSelectors.theme1.addEventListener("click", function(){
+        DOMSelectors.theme.classList.remove('theme2')
+        DOMSelectors.theme.classList.add('theme1')
+    })
+}
 
-const insert1 = `<div class="card">
+function theme2(){
+    DOMSelectors.theme2.addEventListener("click", function(){
+        DOMSelectors.theme.classList.remove('theme1')
+        DOMSelectors.theme.classList.add('theme2')
+    })
+}
+
+function hi(arr){
+    arr.forEach((el)=>DOMSelectors.container.insertAdjacentHTML(
+        "beforeend",
+        `<div class='card'>
+        <h2 class='card-title'>${el.name}</h2>
+        <img src='${el.picture}' alt="" class="card-img">
+        <h3 class='card-price'>${el.price}</h3>
+        </div>`
+    ))
+}
+
+function filters(){
+    let buttons = DOMSelectors.clicky
+    /* buttons.forEach((btn) => btn.addEventListener("click", function(){
+        console.log("hi")
+    })) */
+    buttons.forEach((btn) => btn.addEventListener("click", function(){
+        let category = btn.textContent.toLowerCase()
+        let type = menuItems.filter((el)=>el.type.includes(category))
+        let origin = menuItems.filter((el)=>el.origin.includes(category))
+        DOMSelectors.container.innerHTML = ""
+        hi(type) 
+        hi(origin)
+        if (category === "vegan"){
+            const f = menuItems.filter((el)=>el.vegan === true)
+            hi(f)
+        } else if (category === "non-vegan") {
+            const a = menuItems.filter((el)=>el.vegan === false)
+            hi(a)
+        } else {
+            return
+        }
+
+    })) 
+}
+
+filters()
+theme1()
+theme2()
+//console.log(DOMSelectors.clicky)
+
+/* const insert1 = `<div class="card">
     <h2 class="card-title">`
     
 const insert2 = `</h2>
@@ -92,34 +146,12 @@ function dessert(){
 
 
 function vegan(){
-    DOMSelectors.vegan.addEventListener("click", function(){//if you do figure it out this function prob is not needed
+    DOMSelectors.vegan.addEventListener("click", function(){
         DOMSelectors.container.innerHTML = "";
         console.log("bri*ish")
         const veganName = menuItems.filter((item) => item.vegan === true) 
-    
-        //make an array
-        //push each string that the vegan for each prints out and into the array
-        //go through thtat array one by one for heading
-
-        //for some reason its not inserting the heading :(
-        //find out why fr
-        //BRO ADD THE + 😭 (problem solved! [thank fucking gof])
-        
-        //const arr = []
         veganName.forEach((item) => DOMSelectors.container.insertAdjacentHTML('beforeend', `${insert1}` +`${item.name}`+  `${insert2}` + `${item.picture}` + `${insert3}` + `${item.price}` + `${insert4}`)) 
-        //dawg it was that simple 💀
-        /* for (let i = 0; i < arr.length; i++) {
-            console.log(arr)
-            DOMSelectors.container.insertAdjacentHTML('beforeend', `${insert1}` + `${arr[0]}`+ `${insert2}` + `${insert3}`) //maybe get the insert into the foreach instead
-          }  */
-          //push one to array
-          //delete that one thing <- i dont think i can delte cayse itll modify and druin fthe forr loop aghghghghghg
-          //push that next thing
-          //repeat in the for loop until its over
-        
-        
-        //DOMSelectors.container.insertAdjacentHTML("beforeend", `${gelato}`) you have to somehow use map and filter to figure this out
-       
+    
     })
 }
 
@@ -147,12 +179,5 @@ dessert()
 
 vegan()
 nonVegan()
+ */
 
-//instead of making every html div a variable maybe try the input thing you did in rgb, the ${}
-//${foodName} <- something like that
-//filter through every item in menuItems, and if it contains let's so vegan
-//put the vegan into foodName or whatever
-//and then insert the html
-
-//search "can i use html as a property js" when you get home <- you cant 
-//menuItems.forEach((thing) => console.log(thing.vegan))
